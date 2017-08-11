@@ -3,6 +3,7 @@
 克隆到本地实现的方法
 
 1、将dbConnect.js文件的
+
 function connectServer() {
 
     var client = mysql.createConnection({
@@ -13,6 +14,7 @@ function connectServer() {
     })
     return client;
 }
+
 方法的属性改为自己电脑上mysql的对应属性
 2、在刚才的数据库中新建表table_1，table_1表中有username和password两列
 3、安装依赖包：在项目的根目录打开命令行输入npm i,安装好之后输入npm start
