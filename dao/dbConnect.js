@@ -9,7 +9,7 @@ function connectServer() {
         host: 'localhost',
         user: 'root',
         password: '2320720405',
-        database: 'hanxudong'
+        database: 'SwithunHan'
     })
     return client;
 }
