@@ -10,7 +10,8 @@
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
     "ejs": "~2.5.6",
-  "mysql":"latest" , "express": "~4.15.2",
+    "mysql":"latest" , 
+    "express": "~4.15.2",
     "morgan": "~1.8.1",
     "serve-favicon": "~2.4.2",
     "express-session":"latest"
