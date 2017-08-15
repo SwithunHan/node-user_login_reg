@@ -10,7 +10,7 @@ function connectServer() {
         user: 'root',
         password: '2320720405',
         database: 'SwithunHan'
-    })
+    });
     return client;
 }
 
