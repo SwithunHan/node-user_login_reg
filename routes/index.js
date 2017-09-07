@@ -67,7 +67,11 @@ router.route('/reg')
     })
     .post(function(req,res) {
         client = usr.connect();
-
+        usr.selectFun(client,req.body.username, function (result) {
+            if(result[0]!=null){
+                res.send('用户名不能重复！');
+            }
+        });
         usr.insertFun(client,req.body.username ,req.body.password2, function (err) {
             if(err) throw err;
             res.send('注册成功');

@@ -6,7 +6,7 @@ var mysql = require('mysql');
 function connectServer() {
 
     var client = mysql.createConnection({
-        host: 'localhost',
+        host: '127.0.0.1',
         user: 'root',
         password: '2320720405',
         database: 'SwithunHan'
@@ -24,7 +24,7 @@ function selectFun(client, username, callback) {
 }
 
 function insertFun(client, username, password, callback) {
-    client.query('insert into table_1 value(?,?)', [username, password], function (err, result) {
+    client.query('insert into table_1 value(0,?,?)', [username, password], function (err, result) {
         if (err) {
             console.log("error:" + err.message);
             return err;

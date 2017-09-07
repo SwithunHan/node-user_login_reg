@@ -1,4 +1,4 @@
-一个用node+express+mysql实现的用户登录、注册的小demo
+﻿一个用node+express+mysql实现的用户登录、注册的小demo
 
 克隆到本地实现的方法
 
@@ -23,3 +23,4 @@ function connectServer() {
 tip:在发布项目时不能总是手动重启服务器吧！所以用pm2这个包运行项目
 1、安装pm2 - - - - - - npm install -g pm2
 2、使用pm2运行项目 pm2 start [your app name] --watch(这样就可以在后台运行并重启服务器)
+3、在使用时需要联网，不然可能出现页面找不到，因为连接数据库使用的是localhost，会通过DNS解析
