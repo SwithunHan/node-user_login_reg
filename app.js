@@ -1,19 +1,20 @@
+
+//引入包
 var session=require('express-session');
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
+var session=require('express-session');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+//设置路由路径
 var index = require('./routes/index');
 var users = require('./routes/users');
 
-var session=require('express-session');
-
 var app = express();
 
-// view engine setup
+// 设置视图类型
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
@@ -31,10 +32,11 @@ app.use(session({
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+//设置路由
 app.use('/', index);
 app.use('/users', users);
 
-// catch 404 and forward to error handler
+// 设置404
 app.use(function (req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
